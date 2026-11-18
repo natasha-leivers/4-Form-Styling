@@ -18,58 +18,64 @@
         <form id="contact-form"
               action="#"
               method="POST">
-            <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="text"
-                       id="name"
-                       name="name"
-                       required
-                       minlength="2"
-                       placeholder="John Smith">
+            <div class="column">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           required
+                           minlength="2"
+                           placeholder="John Smith">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           required
+                           placeholder="your.email@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel"
+                           id="phone"
+                           name="phone"
+                           pattern="[0-9]{10}"
+                           placeholder="0777 7777 777">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email"
-                       id="email"
-                       name="email"
-                       required
-                       placeholder="your.email@mail.com">
+
+            <div class="column">
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <select id="subject"
+                            name="subject"
+                            required>
+                        <option value="">Please select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="billing">Billing Question</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message"
+                              name="message"
+                              rows="5"
+                              requiredminlength="10"
+                              placeholder="Write your message here"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="newsletter">
+                        <input type="checkbox"
+                               id="newsletter"
+                               name="newsletter">
+                        Subscribe to our newsletter
+                    </label>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel"
-                       id="phone"
-                       name="phone"
-                       pattern="[0-9]{10}"
-                       placeholder="0777 7777 777">
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject:</label>
-                <select id="subject"
-                        name="subject"
-                        required>
-                    <option value="">Please select a subject</option>
-                    <option value="general">General Inquiry</option>
-                    <option value="support">Technical Support</option>
-                    <option value="billing">Billing Question</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message"
-                          name="message"
-                          rows="5"
-                          requiredminlength="10"
-                          placeholder="Write your message here"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="newsletter">
-                    <input type="checkbox"
-                           id="newsletter"
-                           name="newsletter">
-                    Subscribe to our newsletter
-                </label>
-                <button type="submit">Send Message</button>
+            <button type="submit">Send Message</button>
         </form>
 
     </main>
